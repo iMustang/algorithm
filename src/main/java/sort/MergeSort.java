@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 /**
  * 归并排序
+ * https://www.jianshu.com/p/33cffa1ce613
  */
 public class MergeSort {
     public static void merge(int[] arr, int left, int right) {
