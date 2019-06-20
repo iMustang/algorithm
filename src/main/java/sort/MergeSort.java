@@ -1,11 +1,11 @@
-package sort.mergesort;
+package sort;
 
 import java.util.Arrays;
 
 /**
  * 归并排序
  */
-public class Main {
+public class MergeSort {
     public static void merge(int[] arr, int left, int right) {
         int[] temp = new int[right - left + 1];
         int mid = (left + right) / 2;
@@ -41,7 +41,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        int[] arr = {3, 2, 6, 1, 2, 9, 5, 4, 0};
+        int[] arr = {8, 3, 2, 1, 4, 5, 7, 9};
         mergeSort(arr, 0, arr.length - 1);
         System.out.println(Arrays.toString(arr));
     }
