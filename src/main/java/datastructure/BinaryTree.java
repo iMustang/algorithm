@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * @Title: BinaryTree
+ * BinaryTree（二叉树）
  */
 public class BinaryTree {
     private List<Node> nodeList;
