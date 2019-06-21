@@ -29,7 +29,7 @@ public class Heap {
     public static void main(String[] args) {
         int[] arr = {1, 3, 2, 6, 5, 7, 8, 9, 10};
         Heap heap = new Heap();
-        int[] heapArr = heap.insertElement(arr, 0);
-        System.out.println(Arrays.toString(heapArr));
+        arr = heap.insertElement(arr, 0);
+        System.out.println(Arrays.toString(arr));
     }
 }
