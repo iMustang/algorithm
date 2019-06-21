@@ -32,6 +32,9 @@ public class CountSort {
         return sortedArr;
     }
 
+    /**
+     * 稳定的计数排序
+     */
     static int[] stableCountSort(int[] a) {
         int min = a[0];
         int max = a[0];
