@@ -33,6 +33,34 @@ public class QuickSort2 {
         return left;
     }
 
+    /**
+     * 挖坑法另一种表达
+     */
+    static int division2(int[] a, int left, int right) {
+        int pivot = a[left];
+        while (left < right) {
+            // 从右向左找比pivot小的元素
+            while (left < right && a[right] >= pivot) {
+                right--;
+            }
+            if (left < right) {
+                a[left] = a[right];
+                left++;
+            }
+            // 从左向右找比pivot大的元素
+            while (left < right && a[left] <= pivot) {
+                left++;
+            }
+            if (left < right) {
+                a[right] = a[left];
+                right--;
+            }
+        }
+        // left==right
+        a[left] = pivot;
+        return left;
+    }
+
     public static void main(String[] args) {
         int[] arr = {3, 5, 2, 1, 7, 9, 0, 4};
         quickSort(arr, 0, arr.length - 1);

@@ -5,6 +5,7 @@ import java.util.Arrays;
 /**
  * 希尔排序
  * 希尔排序在数组中采用跳跃式分组的策略，通过某个增量将数组元素划分为若干组，然后分组进行插入排序，随后逐步缩小增量，继续按组进行插入排序操作，直至增量为1。
+ * 分治+插入排序
  */
 public class ShellSort {
     static void shellSort(int[] a) {

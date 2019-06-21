@@ -4,6 +4,10 @@ import java.util.Arrays;
 
 /**
  * 快速排序（指针交换法）
+ * 先从序列中选出一个数作为基准值（pivot）
+ * 将比pivot小的数全部放在pivot的左边，大于或等于pivot的数全部放在pivot的右边
+ * 对pivot两侧两个子序列重复上面步骤，直到各区间只有1个数
+ * 分治
  */
 public class QuickSort {
     static void quickSort(int[] a, int left, int right) {
@@ -20,9 +24,11 @@ public class QuickSort {
         int pivotIndex = left;
         int tmp = 0;
         while (left < right) {
+            // 从右向左找比pivot小的元素
             while (left < right && a[right] >= pivot) {
                 right--;
             }
+            // 从左向右找比pivot大的元素
             while (left < right && a[left] <= pivot) {
                 left++;
             }
