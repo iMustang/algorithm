@@ -8,9 +8,16 @@ import java.util.Arrays;
  * 将比pivot小的数全部放在pivot的左边，大于或等于pivot的数全部放在pivot的右边
  * 对pivot两侧两个子序列重复上面步骤，直到各区间只有1个数
  * 分治
+ *
+ * 时间复杂度：
+ * 平均情况O(n)*O(logn)
+ * 最坏情况O(n)*O(n)
+ *
+ * 快速排序时间复杂度（c*O(n*logn)）常量比归并排序小的多。
  */
 public class QuickSort {
     static void quickSort(int[] a, int left, int right) {
+        // 控制递归结束条件
         if (left >= right) {
             return;
         }
