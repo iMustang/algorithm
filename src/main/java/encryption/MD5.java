@@ -4,6 +4,8 @@ package encryption;
  * MD5（Message-digest algorithm 5）是信息摘要的一种实现
  * 信息摘要把明文内容按某种规则生成一段哈希值，即使明文消息只改动一点点，生成的结果也会完全不同
  * MD5可以从任意长度的明文字符串生成128位的哈希值，也就是32位的16进制数
+ *
+ * https://mp.weixin.qq.com/s?__biz=MzIxMjE5MTE1Nw==&mid=2653191642&idx=1&sn=47c6340a6664af2f62e6c580528ea6f6&chksm=8c990f00bbee861698daa51b0622e581b3279c0759a16330fe538de745cb6abed8288b0bd778&mpshare=1&scene=23&srcid=0622zKTzB57q9wvrDV5GDAjF#rd
  */
 public class MD5 {
 	/**
@@ -32,7 +34,7 @@ public class MD5 {
 	 * 3. 循环加工
 	 * 上面第1步处理后的原文长度为 M = 512*(N+1)
 	 * 循环加工时，主循环次数= M/512，每个主循环中包含512/32*4=64次子循环
-	 * 每一个子循环的过程见单次子循环.png
+	 * 每一个子循环的过程见MD5单次子循环.png
 	 *
 	 * 绿色F，代表非线性函数。官方MD5所用到的函数有四种：
 	 *
