@@ -9,7 +9,7 @@ public class GreatestCommonDivisor {
     /**
      * 辗转相除法
      * 欧几里得发明
-     * 基于定理：两个正整数a、b（a>b），那么它们的最大公约数等于 c、b的最大公约数，其中c=a%b
+     * 定理：两个正整数a、b（a>b），那么它们的最大公约数等于 c、b的最大公约数，其中c=a%b
      * 缺点：当两个整数较大时，取模运算性能比较低
      */
     static int successiveDivision(int a, int b) {
@@ -27,7 +27,7 @@ public class GreatestCommonDivisor {
     /**
      * 更相减损术
      * 出自《九章算术》
-     * 基于定理：两个正整数a、b（a>b），那么它们的最大公约数等于 c、b的最大公约数，其中c=a-b
+     * 定理：两个正整数a、b（a>b），那么它们的最大公约数等于 c、b的最大公约数，其中c=a-b
      * 缺点：在计算1000与1的最大公约数时，需要多次减法计算
      */
     static int mutualReduce(int a, int b) {
@@ -61,6 +61,7 @@ public class GreatestCommonDivisor {
             a = b;
             b = tmp;
         }
+        // 使用按位与判断奇偶性
         if ((a & 1) == 0 && (b & 1) == 0) { // a、b都为偶数
             return shiftWithMutualReduce(a >> 1, b >> 1) << 1;
         }
