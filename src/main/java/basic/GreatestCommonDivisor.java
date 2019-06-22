@@ -3,6 +3,7 @@ package basic;
 /**
  * 求最大公约数
  * 后续补充辗转相除法、更相减损术的原理证明
+ * 以下方法中，假定输入参数a、b都是正整数，省去了校验代码
  */
 public class GreatestCommonDivisor {
     /**
