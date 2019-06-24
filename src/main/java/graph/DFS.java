@@ -26,14 +26,41 @@ public class DFS {
 		}
 	}
 
+	/**
+	 * 图的结构见BFS、DFS示例中用的图.png
+	 */
 	public static void main(String[] args) {
+		Graph graph = new Graph(6);
+		graph.adj[0].add(1);
+		graph.adj[0].add(2);
+		graph.adj[0].add(3);
 
+		graph.adj[1].add(0);
+		graph.adj[1].add(3);
+		graph.adj[1].add(4);
+
+		graph.adj[2].add(0);
+
+		graph.adj[3].add(0);
+		graph.adj[3].add(1);
+		graph.adj[3].add(4);
+		graph.adj[3].add(5);
+
+		graph.adj[4].add(1);
+		graph.adj[4].add(3);
+		graph.adj[4].add(5);
+
+		graph.adj[5].add(3);
+		graph.adj[5].add(4);
+
+		System.out.println("图的深度优先遍历：");
+		dfs(graph, 0, new boolean[graph.size]);
 	}
 
 	/**
 	 * 图的邻接表形式
 	 */
-	class Graph {
+	static class Graph {
 		private int size;
 		private Vertex[] vertex;
 		private LinkedList<Integer>[] adj;
@@ -60,7 +87,7 @@ public class DFS {
 	/**
 	 * 图的顶点
 	 */
-	class Vertex {
+	static class Vertex {
 		private int data;
 
 		Vertex(int data) {
