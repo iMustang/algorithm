@@ -1,7 +1,7 @@
 package topic;
 
 /**
- * @Title: AnnulateLinkedList
+ * AnnulateLinkedList
  * 单向链表，链表中可能出现环，判断链表是否有环
  */
 public class AnnulateLinkedList {
