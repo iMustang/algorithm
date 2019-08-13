@@ -1,4 +1,4 @@
-package programmingpearl;
+package programmingpearl.str;
 
 import java.util.HashMap;
 import java.util.Map;

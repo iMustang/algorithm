@@ -1,4 +1,4 @@
-package programmingpearl;
+package programmingpearl.str;
 
 import java.util.HashSet;
 import java.util.Scanner;
