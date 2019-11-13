@@ -29,7 +29,7 @@ public class QuickSort {
 	static int division(int[] a, int left, int right) {
 		int pivot = a[left];
 		int pivotIndex = left;
-		int tmp = 0;
+		int tmp;
 		while (left < right) {
 			// 从右向左找比pivot小的元素
 			while (left < right && a[right] >= pivot) {
